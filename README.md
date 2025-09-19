@@ -34,39 +34,50 @@ Input: 1 x 28 x 28
 
 GPU available: True
 
-Model Summary:
-----------------------------------------------------------------
-        Layer (type)               Output Shape         Param #
-================================================================
-            Conv2d-1           [-1, 16, 26, 26]             160
-       BatchNorm2d-2           [-1, 16, 26, 26]              32
-           Dropout-3           [-1, 16, 26, 26]               0
-            Conv2d-4           [-1, 32, 24, 24]           4,640
-       BatchNorm2d-5           [-1, 32, 24, 24]              64
-           Dropout-6           [-1, 32, 24, 24]               0
-            Conv2d-7           [-1, 10, 24, 24]             330
-         MaxPool2d-8           [-1, 10, 12, 12]               0
-            Conv2d-9           [-1, 16, 10, 10]           1,456
-      BatchNorm2d-10           [-1, 16, 10, 10]              32
-          Dropout-11           [-1, 16, 10, 10]               0
-           Conv2d-12             [-1, 16, 8, 8]           2,320
-      BatchNorm2d-13             [-1, 16, 8, 8]              32
-          Dropout-14             [-1, 16, 8, 8]               0
-           Conv2d-15             [-1, 16, 6, 6]           2,320
-      BatchNorm2d-16             [-1, 16, 6, 6]              32
-          Dropout-17             [-1, 16, 6, 6]               0
-AdaptiveAvgPool2d-18             [-1, 16, 1, 1]               0
-           Linear-19                   [-1, 10]             170
-================================================================
-Total params: 11,588
-Trainable params: 11,588
-Non-trainable params: 0
-----------------------------------------------------------------
-Input size (MB): 0.00
-Forward/backward pass size (MB): 0.80
-Params size (MB): 0.04
-Estimated Total Size (MB): 0.85
-----------------------------------------------------------------
+## 🏗️ Architecture
+
+| Layer (type)        | Output Shape        | Param # |
+|----------------------|---------------------|---------|
+| Conv2d-1            | [-1, 16, 26, 26]   | 160     |
+| BatchNorm2d-2       | [-1, 16, 26, 26]   | 32      |
+| Dropout-3           | [-1, 16, 26, 26]   | 0       |
+| Conv2d-4            | [-1, 32, 24, 24]   | 4,640   |
+| BatchNorm2d-5       | [-1, 32, 24, 24]   | 64      |
+| Dropout-6           | [-1, 32, 24, 24]   | 0       |
+| Conv2d-7            | [-1, 10, 24, 24]   | 330     |
+| MaxPool2d-8         | [-1, 10, 12, 12]   | 0       |
+| Conv2d-9            | [-1, 16, 10, 10]   | 1,456   |
+| BatchNorm2d-10      | [-1, 16, 10, 10]   | 32      |
+| Dropout-11          | [-1, 16, 10, 10]   | 0       |
+| Conv2d-12           | [-1, 16, 8, 8]     | 2,320   |
+| BatchNorm2d-13      | [-1, 16, 8, 8]     | 32      |
+| Dropout-14          | [-1, 16, 8, 8]     | 0       |
+| Conv2d-15           | [-1, 16, 6, 6]     | 2,320   |
+| BatchNorm2d-16      | [-1, 16, 6, 6]     | 32      |
+| Dropout-17          | [-1, 16, 6, 6]     | 0       |
+| AdaptiveAvgPool2d-18| [-1, 16, 1, 1]     | 0       |
+| Linear-19           | [-1, 10]           | 170     |
+
+---
+
+## 📌 Model Stats
+
+- **Total params:** 11,588  
+- **Trainable params:** 11,588  
+- **Non-trainable params:** 0  
+
+---
+
+## 💾 Memory Usage
+
+- **Input size (MB):** 0.00  
+- **Forward/backward pass size (MB):** 0.80  
+- **Params size (MB):** 0.04  
+- **Estimated Total Size (MB):** 0.85  
+
+
+
+
 Epoch 1 [Training]: 100%|██████████| 469/469 [00:16<00:00, 28.02it/s, accuracy=87.7, loss=0.109]
 Training Epoch 1: Avg loss: 0.4473, Accuracy: 52665/60000 (87.78%)
 
